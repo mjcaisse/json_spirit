@@ -1,16 +1,18 @@
 # Main CMake build control file for json_spirit
 # Copyright (C) 2013 Jeff Trull <edaskel@att.net>
+# Copyright (C) 2018 Michael Caisse, ciere.com
 #
 #   Distributed under the Boost Software License, Version 1.0. (See accompanying
 #   file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 #
 
 # CMake build control file for json_spirit
-# Created following settings in Jamroot and libs/json/test/Jamfile
 
-cmake_minimum_required( VERSION 2.8.11 )
 
-project( json_spirit )
+cmake_minimum_required( VERSION 3.1 )
+project(json_spirit CXX)
+
+set(CMAKE_CXX_STDANDARD 11)
 
 option(JSON_SPIRIT_DEBUG_PARSER "Trace spirit parser in Debug config" OFF)
 
@@ -47,3 +49,4 @@ endif()
 enable_testing()
 
 add_subdirectory( libs/json/test )
+add_subdirectory( example )

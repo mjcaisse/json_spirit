@@ -24,6 +24,7 @@
 
 #include <map>
 #include <string>
+#include <vector>
 
 
 namespace ciere { namespace json
@@ -40,7 +41,8 @@ namespace ciere { namespace json
    class                                                value;
    typedef std::map<std::string, value>                 object_t;
    typedef std::pair<std::string, value>                object_member_t;
-   typedef boost::container::stable_vector<value>       array_t;
+   //typedef boost::container::stable_vector<value>       array_t;
+   typedef std::vector<value>                           array_t;
 
 
    // nulls always compare
